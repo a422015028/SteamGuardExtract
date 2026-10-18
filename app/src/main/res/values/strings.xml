@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SteamGuardExtract</string>
+    <string name="app_description">从 Steam App 运行时提取 Steam Guard 密钥（互操作用途）</string>
+</resources>

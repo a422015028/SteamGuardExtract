@@ -1,0 +1,33 @@
+# ============ Gradle 构建 ============
+.gradle/
+build/
+
+# ============ 本地配置（机器相关，含 sdk.dir） ============
+local.properties
+
+# ============ IDE ============
+.idea/
+*.iml
+.vscode/
+
+# ============ 系统文件 ============
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ============ 签名密钥（私钥，切勿提交） ============
+*.keystore
+*.jks
+keystore.properties
+signing.properties
+
+# ============ Android ============
+captures/
+.externalNativeBuild/
+.cxx/
+
+# ============ 日志 ============
+*.log
+
+# ============ WorkBuddy 项目本地数据 ============
+.workbuddy/
