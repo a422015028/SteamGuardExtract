@@ -6,7 +6,7 @@
 # XposedModuleInterface 回调方法因 override library 接口方法被 R8 自动保留。
 # =============================================================================
 
--keep,allowobfuscation class com.muort.steamguard.SteamGuardEntry {
+-keep,allowobfuscation class io.github.a422015028.steamguardextract.SteamGuardEntry {
     <init>();
 }
 

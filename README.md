@@ -73,7 +73,7 @@ SteamGuardExtract/
 │   ├── proguard-rules.pro      # R8 混淆规则
 │   ├── signing.properties      # 本地签名（不提交，需自行创建）
 │   └── src/main/
-│       ├── java/com/muort/steamguard/
+│       ├── java/io/github/a422015028/steamguardextract/
 │       │   ├── SteamGuardEntry.java  # 模块入口与 hook 挂载
 │       │   ├── GuardCore.java        # 截获逻辑主体
 │       │   └── GuardUi.java          # 密钥弹窗

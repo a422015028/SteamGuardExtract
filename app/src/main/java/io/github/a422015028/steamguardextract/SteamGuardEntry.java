@@ -1,4 +1,4 @@
-package com.muort.steamguard;
+package io.github.a422015028.steamguardextract;
 
 import android.app.Application;
 import android.content.Context;

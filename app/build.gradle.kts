@@ -15,7 +15,7 @@ configurations.configureEach {
 }
 
 android {
-    namespace = "com.muort.steamguard"
+    namespace = "io.github.a422015028.steamguardextract"
 
     // io.github.libxposed:api:102.0.0 的 aar-metadata 强制 minCompileSdk=37
     // API 37 仅以 platforms;android-37.0 发布(无 android-37), 必须显式 minor=0 才能解析
@@ -24,7 +24,7 @@ android {
     buildToolsVersion = "37.0.0"
 
     defaultConfig {
-        applicationId = "com.muort.steamguard"
+        applicationId = "io.github.a422015028.steamguardextract"
         minSdk = 26
         targetSdk = 37
         versionCode = 1
