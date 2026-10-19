@@ -27,8 +27,8 @@ android {
         applicationId = "io.github.a422015028.steamguardextract"
         minSdk = 26
         targetSdk = 37
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 11
+        versionName = "1.1.0"
     }
 
     // 从本地 signing.properties 读取 release 签名（该文件与 release.keystore 均被
@@ -178,6 +178,16 @@ tasks.matching { it.name == "packageRelease" }.configureEach {
                         if (entry.name !in metadataToStrip) {
                             val newEntry = ZipEntry(entry.name)
                             newEntry.time = entry.time
+                            // 保持原始压缩方法：Android 11+ 要求 resources.arsc
+                            // 未压缩（STORED）并在 4 字节边界对齐，否则安装失败
+                            if (entry.method == ZipEntry.STORED) {
+                                newEntry.method = ZipEntry.STORED
+                                newEntry.size = entry.size
+                                newEntry.crc = entry.crc
+                                newEntry.compressedSize = entry.size
+                            } else {
+                                newEntry.method = ZipEntry.DEFLATED
+                            }
                             zipOut.putNextEntry(newEntry)
                             if (!entry.isDirectory) {
                                 zipIn.getInputStream(entry).copyTo(zipOut)
